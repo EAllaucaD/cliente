@@ -2,7 +2,7 @@ import { createClient } from "soap";
 
 
 //endpoint references
-const url = "http:/localhost:5000";
+const url = "  http://127.0.0.1:4040 ";
 
     createClient(url, function (err, client){
         if (err){
@@ -10,8 +10,8 @@ const url = "http:/localhost:5000";
         }else {
             
             //Make soap request using client object
-            const args = { intA: 20, intB: 3};
-            client.Suma(args, function(err, result){
+            const args = { intA: 20, intB: 20};
+            client.CalculatorPortType(args, function(err, result){
                 if (err) {
                     console.error(err);
                 }else {
